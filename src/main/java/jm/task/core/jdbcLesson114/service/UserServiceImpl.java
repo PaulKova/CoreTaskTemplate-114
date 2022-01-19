@@ -1,8 +1,8 @@
-package jm.task.core.jdbcLesson.service;
+package jm.task.core.jdbcLesson114.service;
 
-import jm.task.core.jdbcLesson.dao.UserDaoHibernateImpl;
-import jm.task.core.jdbcLesson.dao.UserDaoJDBCImpl;
-import jm.task.core.jdbcLesson.model.User;
+import jm.task.core.jdbcLesson114.dao.UserDaoHibernateImpl;
+import jm.task.core.jdbcLesson114.dao.UserDaoJDBCImpl;
+import jm.task.core.jdbcLesson114.model.User;
 
 import java.util.List;
 

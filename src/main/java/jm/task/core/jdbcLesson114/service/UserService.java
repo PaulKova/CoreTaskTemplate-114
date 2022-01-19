@@ -1,10 +1,10 @@
-package jm.task.core.jdbcLesson.dao;
+package jm.task.core.jdbcLesson114.service;
 
-import jm.task.core.jdbcLesson.model.User;
+import jm.task.core.jdbcLesson114.model.User;
 
 import java.util.List;
 
-public interface UserDao {
+public interface UserService {
     void createUsersTable();
 
     void dropUsersTable();

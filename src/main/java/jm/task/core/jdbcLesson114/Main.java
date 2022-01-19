@@ -1,6 +1,6 @@
-package jm.task.core.jdbcLesson;
+package jm.task.core.jdbcLesson114;
 
-import jm.task.core.jdbcLesson.service.UserServiceImpl;
+import jm.task.core.jdbcLesson114.service.UserServiceImpl;
 
 public class Main {
     public static void main(String[] args) {
@@ -16,7 +16,7 @@ public class Main {
 //        userService.removeUserById(2);
 //        userService.getAllUsers();
 //        userService.cleanUsersTable();
-//        userService.dropUsersTable();
+        userService.dropUsersTable();
 
 
     }

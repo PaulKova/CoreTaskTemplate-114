@@ -1,4 +1,4 @@
-package jm.task.core.jdbcLesson.model;
+package jm.task.core.jdbcLesson114.model;
 
 import javax.persistence.*;
 
