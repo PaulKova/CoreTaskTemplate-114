@@ -12,7 +12,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Properties;
 
-public class Util {
+public class Util implements AutoCloseable{
 
     //JDBC
     private static final String URL = "jdbc:mysql://localhost:3306/users?serverTimezone=Europe/Moscow";
@@ -80,5 +80,10 @@ public class Util {
 //        } catch (SQLException e) {
 //            e.printStackTrace();
 //        }
+    }
+
+    @Override
+    public void close() throws Exception {
+
     }
 }

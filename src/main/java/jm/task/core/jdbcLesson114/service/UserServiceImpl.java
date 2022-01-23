@@ -1,7 +1,7 @@
 package jm.task.core.jdbcLesson114.service;
 
+import jm.task.core.jdbcLesson114.dao.UserDao;
 import jm.task.core.jdbcLesson114.dao.UserDaoHibernateImpl;
-import jm.task.core.jdbcLesson114.dao.UserDaoJDBCImpl;
 import jm.task.core.jdbcLesson114.model.User;
 
 import java.util.List;
@@ -9,12 +9,14 @@ import java.util.List;
 
 public class UserServiceImpl implements UserService {
 
-    private final UserDaoJDBCImpl userDaoJDBC = new UserDaoJDBCImpl();
-    private final UserDaoHibernateImpl userDaoHibernate = new UserDaoHibernateImpl();
+//    private final UserDaoJDBCImpl userDaoJDBC = new UserDaoJDBCImpl();
+//    private final UserDaoHibernateImpl userDaoHibernate = new UserDaoHibernateImpl();
+    private final UserDao userDao = new UserDaoHibernateImpl();
+
 
     public void createUsersTable() {
 //        userDaoJDBC.createUsersTable();
-        userDaoHibernate.createUsersTable();
+        userDao.createUsersTable();
     }
 
     public void dropUsersTable() {
