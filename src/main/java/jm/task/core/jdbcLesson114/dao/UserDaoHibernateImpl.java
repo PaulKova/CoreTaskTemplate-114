@@ -2,6 +2,7 @@ package jm.task.core.jdbcLesson114.dao;
 
 import jm.task.core.jdbcLesson114.model.User;
 import jm.task.core.jdbcLesson114.util.Util;
+import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
@@ -30,7 +31,7 @@ public class UserDaoHibernateImpl implements UserDao {
             transaction.commit();
             System.out.println("Таблица создана");
 
-        } catch (Exception e) {
+        } catch (HibernateException e) {
             System.out.println("Не удалось создать таблицу");
             e.printStackTrace();
         }
@@ -47,7 +48,7 @@ public class UserDaoHibernateImpl implements UserDao {
             transaction.commit();
             System.out.println("Таблица удалена");
 
-        } catch (Exception e) {
+        } catch (HibernateException e) {
             System.out.println("Не удалось удалить таблицу");
             e.printStackTrace();
         }
@@ -63,7 +64,7 @@ public class UserDaoHibernateImpl implements UserDao {
             System.out.println("User с именем – " + name + " добавлен в базу данных");
             transaction.commit();
 
-        } catch (Exception e) {
+        } catch (HibernateException e) {
             System.out.println("Не удалось создать новго пользователя с именем " + name);
             e.printStackTrace();
         }
@@ -84,7 +85,7 @@ public class UserDaoHibernateImpl implements UserDao {
 
             transaction.commit();
             System.out.println("Пользователь с id " + id + " удален");
-        } catch (Exception e) {
+        } catch (HibernateException e) {
             System.out.println("Не удальсь удалить пользователя с id " + id);
             e.printStackTrace();
         }
@@ -100,7 +101,7 @@ public class UserDaoHibernateImpl implements UserDao {
             transaction.commit();
             System.out.println("Юзеры получены");
 
-        } catch (Exception e) {
+        } catch (HibernateException e) {
             System.out.println("Не удалось получить всех пользователей");
             e.printStackTrace();
         }
@@ -120,7 +121,7 @@ public class UserDaoHibernateImpl implements UserDao {
             transaction.commit();
             System.out.println("Теперь эта таблица пуста");
 
-        } catch (Exception e) {
+        } catch (HibernateException e) {
             System.out.println("Не удалось очистить таблицу");
             e.printStackTrace();
         }
